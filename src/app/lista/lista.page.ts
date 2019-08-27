@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-list',
-  templateUrl: 'list.page.html',
-  styleUrls: ['list.page.scss']
+  templateUrl: 'lista.page.html',
+  styleUrls: ['lista.page.scss']
 })
-export class ListPage implements OnInit {
+export class ListaPage implements OnInit {
   private selectedItem: any;
   private icons = [
     'flask',
@@ -25,7 +25,8 @@ export class ListPage implements OnInit {
       this.items.push({
         title: 'Item ' + i,
         note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+        //icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+        icon: this.icons[0]
       });
     }
   }

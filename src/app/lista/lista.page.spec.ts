@@ -1,0 +1,32 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { IonicModule } from '@ionic/angular';
+
+import { ListaPage } from './lista.page';
+
+describe('ListaPage', () => {
+  let component: ListaPage;
+  let fixture: ComponentFixture<ListaPage>;
+  let listaPage: HTMLElement;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ ListaPage ],
+      imports: [IonicModule.forRoot()]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(ListaPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  }));
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should have a list of 10 elements', () => {
+    listaPage = fixture.nativeElement;
+    const items = listaPage.querySelectorAll('ion-item');
+    expect(items.length).toEqual(10);
+  });
+
+});
